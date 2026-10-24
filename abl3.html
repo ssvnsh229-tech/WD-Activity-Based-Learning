@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Academic Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+            color: dimgray;
+        }
+
+        header {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background-color: midnightblue;
+            color: white;
+            width: 220px;
+            padding: 20px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: slategray;
+        }
+
+        .main {
+            flex: 1;
+            padding: 20px;
+            min-width: 0;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px lightgray;
+        }
+
+        .card h3 {
+            color: darkslategray;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: darkslategray;
+            margin: 20px 0 12px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th, td {
+            border: 1px solid lightgray;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: darkslategray;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: whitesmoke;
+        }
+
+        .progress {
+            background-color: lightgray;
+            border-radius: 10px;
+            height: 15px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .bar {
+            background-color: green;
+            height: 100%;
+        }
+
+        .announcement {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-left: 5px solid darkslategray;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: midnightblue;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Academic Dashboard</h1>
+        <p>Welcome to Your Student Portal</p>
+    </header>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h3>Dashboard Menu</h3>
+            <a href="#details">Student Details</a>
+            <a href="#results">Semester Results</a>
+            <a href="#attendance">Attendance</a>
+            <a href="#exams">Exam Schedule</a>
+            <a href="#announcements">Announcements</a>
+        </aside>
+
+        <main class="main">
+
+            <section id="details">
+                <h2>Student Details</h2>
+
+                <div class="cards">
+                    <div class="card">
+                        <h3>Name</h3>
+                        <p>Hemanth</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Roll Number</h3>
+                        <p>26001013</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Semester</h3>
+                        <p>Semester 1</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="results">
+                <h2>Semester Results</h2>
+
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Marks</th>
+                        <th>Grade</th>
+                    </tr>
+
+                    <tr>
+                        <td>Web Development</td>
+                        <td>85</td>
+                        <td>A</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computational Mathematics</td>
+                        <td>90</td>
+                        <td>A+</td>
+                    </tr>
+
+                    <tr>
+                        <td>Python</td>
+                        <td>80</td>
+                        <td>A</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="attendance">
+                <h2>Attendance Percentage</h2>
+
+                <div class="card">
+                    <p>Web Development - 85%</p>
+                    <div class="progress">
+                        <div class="bar" style="width: 85%;"></div>
+                    </div>
+
+                    <br>
+
+                    <p>Computational Mathematics - 90%</p>
+                    <div class="progress">
+                        <div class="bar" style="width: 90%;"></div>
+                    </div>
+
+                    <br>
+
+                    <p>Python - 75%</p>
+                    <div class="progress">
+                        <div class="bar" style="width: 75%;"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="exams">
+                <h2>Examination Schedule</h2>
+
+                <table>
+                    <tr>
+                        <th>Subject</th>
+                        <th>Date</th>
+                    </tr>
+
+                    <tr>
+                        <td>Web Development</td>
+                        <td>10 November 2026</td>
+                    </tr>
+
+                    <tr>
+                        <td>Computational Mathematics</td>
+                        <td>12 November 2026</td>
+                    </tr>
+
+                    <tr>
+                        <td>Python</td>
+                        <td>15 November 2026</td>
+                    </tr>
+                </table>
+            </section>
+
+            <section id="announcements">
+                <h2>Announcements</h2>
+
+                <div class="announcement">
+                    <p>Submit your assignments before the deadline.</p>
+                </div>
+
+                <div class="announcement">
+                    <p>Semester examinations are scheduled for November.</p>
+                </div>
+
+                <div class="announcement">
+                    <p>Check your attendance regularly.</p>
+                </div>
+            </section>
+        
+        </main>
+    </div>
+    
+    <footer>
+        <p>&copy; 2026 Student Academic Dashboard</p>
+    </footer>
+    
+</body>
+</html>

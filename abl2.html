@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shopping Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: whitesmoke;
+        }
+
+        header {
+            background-color: darkslategray;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: slategray;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: gold;
+        }
+
+        .banner {
+            background-color: gold;
+            color: darkslategray;
+            text-align: center;
+            padding: 25px;
+            margin: 15px;
+            border-radius: 8px;
+        }
+
+        h2 {
+            text-align: center;
+            margin: 20px;
+            color: darkslategray;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px lightgray;
+            transition: transform 0.3s;
+        }
+
+        .product:hover {
+            transform: translateY(-5px);
+        }
+
+        .product img {
+            width: 100%;
+            max-width: 180px;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+
+        .product h3 {
+            margin: 10px;
+        }
+
+        .price {
+            color: green;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .discount {
+            color: red;
+            margin: 5px;
+        }
+
+        .rating {
+            color: darkorange;
+            margin: 5px;
+        }
+
+        .product p {
+            margin: 8px;
+        }
+
+        .product button {
+            background-color: darkorange;
+            color: black;
+            border: none;
+            padding: 10px 18px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor:pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product button:hover {
+            background-color: gold;
+        }
+
+        footer {
+            background-color: darkslategray;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Online Shopping Store</h1>
+        <p>Shop your favourite products!</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#offers">Offers</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section class="banner" id="home">
+        <h2>Welcome to Our Store!</h2>
+        <p id="offers">Special Offer: Get up to 20% discount!</p>
+    </section>
+
+    <h2>Our Products</h2>
+
+    <section class="products" id="products">
+
+        <div class="product">
+            <img src="abl2 img-1.jpg.webp"
+                 alt="Headphones">
+            <h3>Headphones</h3>
+            <p>Category: Electronics</p>
+            <p class="price">₹800</p>
+            <p class="discount">20% Discount</p>
+            <p class="rating">Rating: ★★★★☆</p>
+            <p>Good quality headphones for music.</p>
+            <button type="button">Shop Now</button>
+        </div>
+
+        <div class="product">
+            <img src="abl2 img-2.jpg.webp"
+                 alt="Wristwatch">
+            <h3>Wristwatch</h3>
+            <p>Category: Accessories</p>
+            <p class="price">₹1,200</p>
+            <p class="discount">10% Discount</p>
+            <p class="rating">Rating: ★★★★★</p>
+            <p>A stylish watch for everyday use.</p>
+            <button type="button">Shop Now</button>
+        </div>
+
+        <div class="product">
+            <img src="abl2 img-3.jpg.webp"
+                 alt="Shoes">
+            <h3>Shoes</h3>
+            <p>Category: Footwear</p>
+            <p class="price">₹1,500</p>
+            <p class="discount">15% Discount</p>
+            <p class="rating">Rating: ★★★★☆</p>
+            <p>Comfortable shoes for daily activities.</p>
+            <button type="button">Shop Now</button>
+        </div>
+
+    </section>
+
+    <section id="contact" class="banner">
+        <h2>Contact Us</h2>
+        <p>Email: shopping@example.com</p>
+        <p>Phone: 9876543210</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 My Online Shopping Store</p>
+    </footer>
+
+</body>
+</html>
